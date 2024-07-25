@@ -1,0 +1,110 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #424242;
+	min-height: 100vh;
+}
+
+.App {
+	text-align: center;
+	background-color: #959595;
+	padding: 40px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.nota-formulario {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+	width: 100%;
+	max-width: 800px;
+}
+
+.nota-formulario input[type="text"] {
+	padding: 10px;
+	margin: 5px;
+	border: none;
+	border-radius: 5px;
+	flex: 1 1 200px;
+}
+
+.nota-formulario button {
+	padding: 10px 20px;
+	border: none;
+	background-color: #333;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	flex: 1 1 100px;
+	
+}
+
+/*Parametros de las notas, width y height cambian el tamaño*/
+.nota {
+	background-color: #decb24;
+	width: 250px; 
+	height: 250px; 
+	padding: 20px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	word-wrap: break-word;
+	position: relative;
+}
+
+/* La rotación de las notas, se les pasa un index y si es par o impar, las rota  */
+.nota.odd {
+    transform: rotate(-3deg);
+}
+
+.nota.even {
+    transform: rotate(3deg);
+}
+
+.nota.importante {
+	background-color: #f32112;
+	color: #fff;
+}
+
+.nota h2 {
+	font-family: "Times New Roman", Times, serif;
+	margin: -10px 0px 0px 0px;
+	text-align: left;
+	font-size: x-large;
+}
+
+.nota p {
+	font-family: cursive;
+	margin: 0px 0px 100px 0px;
+	text-align: left;
+	font-size: medium;
+}
+
+.eliminar-boton {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background-color: #f44336;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	padding: 2px 5px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.eliminar-boton:hover {
+	background-color: #d32f2f;
+}
+/* añade un espacio al checkbox para que esté tan junto a "¿Importante?" */
+.nota-formulario input[type="checkbox"] {
+	margin-left: 10px;
+}
